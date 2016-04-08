@@ -156,8 +156,8 @@ declare noto_${lang,,}_fonts_SUMMARY="${SUMMARY} for ${lang/_}"
 declare noto_${lang,,}_fonts_REQUIRES="${NAME}-common"
 declare noto_${lang,,}_fonts_CONTENTS="
 	etc/fonts/conf.d/*${langpkg}*
-	${FONTSDIR#/}/noto/*${lang/_}*
 	usr/share/fontconfig/conf.avail/*${langpkg}*
+	${FONTSDIR#/}/noto/*${lang/_}*
 "
 noto_fonts_CONTENTS+=" --exclude=*${lang/_}* --exclude=*-${langpkg}* "
 done
@@ -165,26 +165,26 @@ noto_fonts_common_CONTENTS="usr/share/doc/${NAME}/"
 noto_fonts_REQUIRES="${NAME}-common"
 noto_fonts_CONTENTS+="
 	etc/fonts/conf.d/*-noto-*
-	${FONTSDIR#/}/noto/
 	usr/share/fontconfig/conf.avail/*-noto-*
+	${FONTSDIR#/}/noto/
 "
 arimo_fonts_REQUIRES="${NAME}-common"
 arimo_fonts_CONTENTS="
 	etc/fonts/conf.d/*-arimo-*
-	${FONTSDIR#/}/arimo/
 	usr/share/fontconfig/conf.avail/*-arimo-*
+	${FONTSDIR#/}/arimo/
 "
 cousine_fonts_REQUIRES="${NAME}-common"
 cousine_fonts_CONTENTS="
 	etc/fonts/conf.d/*-cousine-*
-	${FONTSDIR#/}/cousine/
 	usr/share/fontconfig/conf.avail/*-cousine-*
+	${FONTSDIR#/}/cousine/
 "
 tinos_fonts_REQUIRES="${NAME}-common"
 tinos_fonts_CONTENTS="
 	etc/fonts/conf.d/*-tinos-*
-	${FONTSDIR#/}/tinos/
 	usr/share/fontconfig/conf.avail/*-tinos-*
+	${FONTSDIR#/}/tinos/
 "
 
 src_compile() { :; }

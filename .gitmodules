@@ -1,0 +1,6 @@
+[submodule "google-noto-fonts"]
+	path = google-noto-fonts
+	url = git://pkgs.fedoraproject.org/rpms/google-noto-fonts.git
+[submodule "google-croscore-fonts"]
+	path = google-croscore-fonts
+	url = git://pkgs.fedoraproject.org/rpms/google-croscore-fonts.git

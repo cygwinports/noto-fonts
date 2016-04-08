@@ -1,0 +1,204 @@
+inherit font
+
+NAME="noto-fonts"
+VERSION=20160307
+RELEASE=1.gitbdf7562
+CATEGORY="X11"
+SUMMARY="Noto fonts"
+DESCRIPTION="Noto's goal is to provide a beautiful reading experience for
+everyone and for all languages. Currently, Noto covers all major languages of
+the world and many others, including European, African, Middle Eastern, Indic,
+South and Southeast Asian, Central Asian, American, and East Asian languages.
+Several minority and historical languages are also supported."
+HOMEPAGE="http://www.google.com/get/noto"
+commit=${RELEASE#*git}b448edc64a025b69d3c81bf1def4850d5
+SRC_URI="
+	https://github.com/googlei18n/noto-fonts/archive/${commit}/noto-fonts-${commit}.tar.gz
+	google-croscore-fonts/30-0-google-croscore-arimo-fontconfig.conf
+	google-croscore-fonts/30-0-google-croscore-cousine-fontconfig.conf
+	google-croscore-fonts/30-0-google-croscore-tinos-fontconfig.conf
+	google-croscore-fonts/62-google-croscore-arimo-fontconfig.conf
+	google-croscore-fonts/62-google-croscore-cousine-fontconfig.conf
+	google-croscore-fonts/62-google-croscore-tinos-fontconfig.conf
+	google-noto-fonts/66-google-noto-color-emoji.conf
+	google-noto-fonts/66-google-noto-kufi-arabic.conf
+	google-noto-fonts/66-google-noto-naskh-arabic-ui.conf
+	google-noto-fonts/66-google-noto-naskh-arabic.conf
+	google-noto-fonts/66-google-noto-sans-armenian.conf
+	google-noto-fonts/66-google-noto-sans-avestan.conf
+	google-noto-fonts/66-google-noto-sans-balinese.conf
+	google-noto-fonts/66-google-noto-sans-bamum.conf
+	google-noto-fonts/66-google-noto-sans-batak.conf
+	google-noto-fonts/66-google-noto-sans-bengali-ui.conf
+	google-noto-fonts/66-google-noto-sans-bengali.conf
+	google-noto-fonts/66-google-noto-sans-brahmi.conf
+	google-noto-fonts/66-google-noto-sans-buginese.conf
+	google-noto-fonts/66-google-noto-sans-buhid.conf
+	google-noto-fonts/66-google-noto-sans-canadian-aboriginal.conf
+	google-noto-fonts/66-google-noto-sans-carian.conf
+	google-noto-fonts/66-google-noto-sans-cham.conf
+	google-noto-fonts/66-google-noto-sans-cherokee.conf
+	google-noto-fonts/66-google-noto-sans-coptic.conf
+	google-noto-fonts/66-google-noto-sans-cuneiform.conf
+	google-noto-fonts/66-google-noto-sans-cypriot.conf
+	google-noto-fonts/66-google-noto-sans-deseret.conf
+	google-noto-fonts/66-google-noto-sans-devanagari-ui.conf
+	google-noto-fonts/66-google-noto-sans-devanagari.conf
+	google-noto-fonts/66-google-noto-sans-egyptian-hieroglyphs.conf
+	google-noto-fonts/66-google-noto-sans-ethiopic.conf
+	google-noto-fonts/66-google-noto-sans-georgian.conf
+	google-noto-fonts/66-google-noto-sans-glagolitic.conf
+	google-noto-fonts/66-google-noto-sans-gothic.conf
+	google-noto-fonts/66-google-noto-sans-gujarati-ui.conf
+	google-noto-fonts/66-google-noto-sans-gujarati.conf
+	google-noto-fonts/66-google-noto-sans-gurmukhi-ui.conf
+	google-noto-fonts/66-google-noto-sans-gurmukhi.conf
+	google-noto-fonts/66-google-noto-sans-hanunoo.conf
+	google-noto-fonts/66-google-noto-sans-hebrew.conf
+	google-noto-fonts/66-google-noto-sans-imperial-aramaic.conf
+	google-noto-fonts/66-google-noto-sans-inscriptional-pahlavi.conf
+	google-noto-fonts/66-google-noto-sans-inscriptional-parthian.conf
+	google-noto-fonts/66-google-noto-sans-javanese.conf
+	google-noto-fonts/66-google-noto-sans-kaithi.conf
+	google-noto-fonts/66-google-noto-sans-kannada-ui.conf
+	google-noto-fonts/66-google-noto-sans-kannada.conf
+	google-noto-fonts/66-google-noto-sans-kayah-li.conf
+	google-noto-fonts/66-google-noto-sans-kharoshthi.conf
+	google-noto-fonts/66-google-noto-sans-khmer-ui.conf
+	google-noto-fonts/66-google-noto-sans-khmer.conf
+	google-noto-fonts/66-google-noto-sans-lao-ui.conf
+	google-noto-fonts/66-google-noto-sans-lao.conf
+	google-noto-fonts/66-google-noto-sans-lepcha.conf
+	google-noto-fonts/66-google-noto-sans-limbu.conf
+	google-noto-fonts/66-google-noto-sans-linear-b.conf
+	google-noto-fonts/66-google-noto-sans-lisu.conf
+	google-noto-fonts/66-google-noto-sans-lycian.conf
+	google-noto-fonts/66-google-noto-sans-lydian.conf
+	google-noto-fonts/66-google-noto-sans-malayalam-ui.conf
+	google-noto-fonts/66-google-noto-sans-malayalam.conf
+	google-noto-fonts/66-google-noto-sans-mandaic.conf
+	google-noto-fonts/66-google-noto-sans-meetei-mayek.conf
+	google-noto-fonts/66-google-noto-sans-mongolian.conf
+	google-noto-fonts/66-google-noto-sans-myanmar-ui.conf
+	google-noto-fonts/66-google-noto-sans-myanmar.conf
+	google-noto-fonts/66-google-noto-sans-new-tai-lue.conf
+	google-noto-fonts/66-google-noto-sans-nko.conf
+	google-noto-fonts/66-google-noto-sans-ogham.conf
+	google-noto-fonts/66-google-noto-sans-ol-chiki.conf
+	google-noto-fonts/66-google-noto-sans-old-italic.conf
+	google-noto-fonts/66-google-noto-sans-old-persian.conf
+	google-noto-fonts/66-google-noto-sans-old-south-arabian.conf
+	google-noto-fonts/66-google-noto-sans-old-turkic.conf
+	google-noto-fonts/66-google-noto-sans-oriya-ui.conf
+	google-noto-fonts/66-google-noto-sans-oriya.conf
+	google-noto-fonts/66-google-noto-sans-osmanya.conf
+	google-noto-fonts/66-google-noto-sans-phags-pa.conf
+	google-noto-fonts/66-google-noto-sans-phoenician.conf
+	google-noto-fonts/66-google-noto-sans-rejang.conf
+	google-noto-fonts/66-google-noto-sans-runic.conf
+	google-noto-fonts/66-google-noto-sans-samaritan.conf
+	google-noto-fonts/66-google-noto-sans-saurashtra.conf
+	google-noto-fonts/66-google-noto-sans-shavian.conf
+	google-noto-fonts/66-google-noto-sans-sinhala.conf
+	google-noto-fonts/66-google-noto-sans-sundanese.conf
+	google-noto-fonts/66-google-noto-sans-syloti-nagri.conf
+	google-noto-fonts/66-google-noto-sans-symbols.conf
+	google-noto-fonts/66-google-noto-sans-syriac-eastern.conf
+	google-noto-fonts/66-google-noto-sans-syriac-estrangela.conf
+	google-noto-fonts/66-google-noto-sans-syriac-western.conf
+	google-noto-fonts/66-google-noto-sans-tagalog.conf
+	google-noto-fonts/66-google-noto-sans-tagbanwa.conf
+	google-noto-fonts/66-google-noto-sans-tai-le.conf
+	google-noto-fonts/66-google-noto-sans-tai-tham.conf
+	google-noto-fonts/66-google-noto-sans-tai-viet.conf
+	google-noto-fonts/66-google-noto-sans-tamil-ui.conf
+	google-noto-fonts/66-google-noto-sans-tamil.conf
+	google-noto-fonts/66-google-noto-sans-telugu-ui.conf
+	google-noto-fonts/66-google-noto-sans-telugu.conf
+	google-noto-fonts/66-google-noto-sans-thaana.conf
+	google-noto-fonts/66-google-noto-sans-thai-ui.conf
+	google-noto-fonts/66-google-noto-sans-thai.conf
+	google-noto-fonts/66-google-noto-sans-tifinagh.conf
+	google-noto-fonts/66-google-noto-sans-ugaritic.conf
+	google-noto-fonts/66-google-noto-sans-ui.conf
+	google-noto-fonts/66-google-noto-sans-vai.conf
+	google-noto-fonts/66-google-noto-sans-yi.conf
+	google-noto-fonts/66-google-noto-sans.conf
+	google-noto-fonts/66-google-noto-serif-armenian.conf
+	google-noto-fonts/66-google-noto-serif-georgian.conf
+	google-noto-fonts/66-google-noto-serif-khmer.conf
+	google-noto-fonts/66-google-noto-serif-lao.conf
+	google-noto-fonts/66-google-noto-serif-thai.conf
+	google-noto-fonts/66-google-noto-serif.conf
+	66-google-noto-nastaliq-urdu.conf
+	66-google-noto-sans-tibetan.conf
+"
+SRC_DIR="noto-fonts-${commit}"
+
+ARCH=noarch
+
+PKG_NAMES="noto-fonts-common noto-fonts arimo-fonts cousine-fonts tinos-fonts"
+for lang in Arabic Aramaic Armenian Avestan Balinese Bamum Batak Bengali Brahmi \
+	Buginese Buhid Canadian_Aboriginal Carian Cham Cherokee Coptic Cuneiform \
+	Cypriot Deseret Devanagari Egyptian_Hieroglyphs Ethiopic Georgian \
+	Glagolitic Gothic Gujarati Gurmukhi Hanunoo Hebrew Javanese Kaithi \
+	Kannada Kayah_Li Kharoshthi Khmer Lao Lepcha Limbu Linear_B Lisu Lycian \
+	Lydian Malayalam Mandaic Meetei_Mayek Mongolian Myanmar NKo Ogham \
+	Ol_Chiki Oriya Osmanya Pahlavi Parthian Persian Phags_Pa Phoenician \
+	Rejang Runic Samaritan Saurashtra Shavian Sinhala South_Arabian \
+	Sundanese Syloti_Nagri Syriac Tagalog Tagbanwa Tai Tamil Telugu Thaana \
+	Thai Tibetan Tifinagh Turkic Ugaritic Urdu Vai Yi
+do
+langpkg=${lang,,}
+langpkg=${langpkg//_/-}
+PKG_NAMES+=" noto-${langpkg}-fonts"
+declare noto_${lang,,}_fonts_SUMMARY="${SUMMARY} for ${lang/_}"
+declare noto_${lang,,}_fonts_REQUIRES="${NAME}-common"
+declare noto_${lang,,}_fonts_CONTENTS="
+	etc/fonts/conf.d/*${langpkg}*
+	${FONTSDIR#/}/noto/*${lang/_}*
+	usr/share/fontconfig/conf.avail/*${langpkg}*
+"
+noto_fonts_CONTENTS+=" --exclude=*${lang/_}* --exclude=*-${langpkg}* "
+done
+noto_fonts_common_CONTENTS="usr/share/doc/${NAME}/"
+noto_fonts_REQUIRES="${NAME}-common"
+noto_fonts_CONTENTS+="
+	etc/fonts/conf.d/*-noto-*
+	${FONTSDIR#/}/noto/
+	usr/share/fontconfig/conf.avail/*-noto-*
+"
+arimo_fonts_REQUIRES="${NAME}-common"
+arimo_fonts_CONTENTS="
+	etc/fonts/conf.d/*-arimo-*
+	${FONTSDIR#/}/arimo/
+	usr/share/fontconfig/conf.avail/*-arimo-*
+"
+cousine_fonts_REQUIRES="${NAME}-common"
+cousine_fonts_CONTENTS="
+	etc/fonts/conf.d/*-cousine-*
+	${FONTSDIR#/}/cousine/
+	usr/share/fontconfig/conf.avail/*-cousine-*
+"
+tinos_fonts_REQUIRES="${NAME}-common"
+tinos_fonts_CONTENTS="
+	etc/fonts/conf.d/*-tinos-*
+	${FONTSDIR#/}/tinos/
+	usr/share/fontconfig/conf.avail/*-tinos-*
+"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	fontinto ${NAME%-fonts}
+	dofont unhinted/Noto*.ttf
+	dofont hinted/Noto*.ttf
+	fontinto arimo
+	dofont hinted/Arimo*.ttf
+	fontinto cousine
+	dofont hinted/Cousine*.ttf
+	fontinto tinos
+	dofont hinted/Tinos*.ttf
+	dofontconf *.conf
+}

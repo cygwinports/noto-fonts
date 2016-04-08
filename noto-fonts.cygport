@@ -20,7 +20,6 @@ SRC_URI="
 	google-croscore-fonts/62-google-croscore-arimo-fontconfig.conf
 	google-croscore-fonts/62-google-croscore-cousine-fontconfig.conf
 	google-croscore-fonts/62-google-croscore-tinos-fontconfig.conf
-	google-noto-fonts/66-google-noto-color-emoji.conf
 	google-noto-fonts/66-google-noto-kufi-arabic.conf
 	google-noto-fonts/66-google-noto-naskh-arabic-ui.conf
 	google-noto-fonts/66-google-noto-naskh-arabic.conf

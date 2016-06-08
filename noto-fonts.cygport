@@ -1,8 +1,8 @@
 inherit font
 
 NAME="noto-fonts"
-VERSION=20160307
-RELEASE=1.gitbdf7562
+VERSION=20160601
+RELEASE=1.git165832a
 CATEGORY="X11"
 SUMMARY="Noto fonts"
 DESCRIPTION="Noto's goal is to provide a beautiful reading experience for
@@ -11,7 +11,7 @@ the world and many others, including European, African, Middle Eastern, Indic,
 South and Southeast Asian, Central Asian, American, and East Asian languages.
 Several minority and historical languages are also supported."
 HOMEPAGE="http://www.google.com/get/noto"
-commit=${RELEASE#*git}b448edc64a025b69d3c81bf1def4850d5
+commit=${RELEASE#*git}a27695339a6c1bb1036b21a7d8a57697b
 SRC_URI="
 	https://github.com/googlei18n/noto-fonts/archive/${commit}/noto-fonts-${commit}.tar.gz
 	google-croscore-fonts/30-0-google-croscore-arimo-fontconfig.conf
@@ -23,6 +23,7 @@ SRC_URI="
 	google-noto-fonts/66-google-noto-kufi-arabic.conf
 	google-noto-fonts/66-google-noto-naskh-arabic-ui.conf
 	google-noto-fonts/66-google-noto-naskh-arabic.conf
+	google-noto-fonts/66-google-noto-nastaliq-urdu.conf
 	google-noto-fonts/66-google-noto-sans-armenian.conf
 	google-noto-fonts/66-google-noto-sans-avestan.conf
 	google-noto-fonts/66-google-noto-sans-balinese.conf
@@ -117,6 +118,7 @@ SRC_URI="
 	google-noto-fonts/66-google-noto-sans-thaana.conf
 	google-noto-fonts/66-google-noto-sans-thai-ui.conf
 	google-noto-fonts/66-google-noto-sans-thai.conf
+	google-noto-fonts/66-google-noto-sans-tibetan.conf
 	google-noto-fonts/66-google-noto-sans-tifinagh.conf
 	google-noto-fonts/66-google-noto-sans-ugaritic.conf
 	google-noto-fonts/66-google-noto-sans-ui.conf
@@ -129,8 +131,13 @@ SRC_URI="
 	google-noto-fonts/66-google-noto-serif-lao.conf
 	google-noto-fonts/66-google-noto-serif-thai.conf
 	google-noto-fonts/66-google-noto-serif.conf
-	66-google-noto-nastaliq-urdu.conf
-	66-google-noto-sans-tibetan.conf
+	66-google-noto-serif-bengali.conf
+	66-google-noto-serif-devanagari.conf
+	66-google-noto-serif-gujarati.conf
+	66-google-noto-serif-kannada.conf
+	66-google-noto-serif-malayalam.conf
+	66-google-noto-serif-tamil.conf
+	66-google-noto-serif-telugu.conf
 "
 SRC_DIR="noto-fonts-${commit}"
 

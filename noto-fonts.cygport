@@ -1,8 +1,8 @@
 inherit font
 
 NAME="noto-fonts"
-VERSION=20160601
-RELEASE=1.git165832a
+VERSION=20161021
+RELEASE=1.git86b2e55
 CATEGORY="X11"
 SUMMARY="Noto fonts"
 DESCRIPTION="Noto's goal is to provide a beautiful reading experience for
@@ -11,7 +11,7 @@ the world and many others, including European, African, Middle Eastern, Indic,
 South and Southeast Asian, Central Asian, American, and East Asian languages.
 Several minority and historical languages are also supported."
 HOMEPAGE="http://www.google.com/get/noto"
-commit=${RELEASE#*git}a27695339a6c1bb1036b21a7d8a57697b
+commit=${RELEASE#*git}3c3e3e4d6614dadd1fa0a7a6dafd74552
 SRC_URI="
 	https://github.com/googlei18n/noto-fonts/archive/${commit}/noto-fonts-${commit}.tar.gz
 	google-croscore-fonts/30-0-google-croscore-arimo-fontconfig.conf
@@ -21,6 +21,7 @@ SRC_URI="
 	google-croscore-fonts/62-google-croscore-cousine-fontconfig.conf
 	google-croscore-fonts/62-google-croscore-tinos-fontconfig.conf
 	google-noto-fonts/66-google-noto-kufi-arabic.conf
+	google-noto-fonts/66-google-noto-mono.conf
 	google-noto-fonts/66-google-noto-naskh-arabic-ui.conf
 	google-noto-fonts/66-google-noto-naskh-arabic.conf
 	google-noto-fonts/66-google-noto-nastaliq-urdu.conf
@@ -126,18 +127,18 @@ SRC_URI="
 	google-noto-fonts/66-google-noto-sans-yi.conf
 	google-noto-fonts/66-google-noto-sans.conf
 	google-noto-fonts/66-google-noto-serif-armenian.conf
+	google-noto-fonts/66-google-noto-serif-bengali.conf
+	google-noto-fonts/66-google-noto-serif-devanagari.conf
 	google-noto-fonts/66-google-noto-serif-georgian.conf
+	google-noto-fonts/66-google-noto-serif-gujarati.conf
+	google-noto-fonts/66-google-noto-serif-kannada.conf
 	google-noto-fonts/66-google-noto-serif-khmer.conf
 	google-noto-fonts/66-google-noto-serif-lao.conf
+	google-noto-fonts/66-google-noto-serif-malayalam.conf
+	google-noto-fonts/66-google-noto-serif-tamil.conf
+	google-noto-fonts/66-google-noto-serif-telugu.conf
 	google-noto-fonts/66-google-noto-serif-thai.conf
 	google-noto-fonts/66-google-noto-serif.conf
-	66-google-noto-serif-bengali.conf
-	66-google-noto-serif-devanagari.conf
-	66-google-noto-serif-gujarati.conf
-	66-google-noto-serif-kannada.conf
-	66-google-noto-serif-malayalam.conf
-	66-google-noto-serif-tamil.conf
-	66-google-noto-serif-telugu.conf
 "
 SRC_DIR="noto-fonts-${commit}"
 
@@ -150,10 +151,10 @@ for lang in Arabic Aramaic Armenian Avestan Balinese Bamum Batak Bengali Brahmi 
 	Glagolitic Gothic Gujarati Gurmukhi Hanunoo Hebrew Javanese Kaithi \
 	Kannada Kayah_Li Kharoshthi Khmer Lao Lepcha Limbu Linear_B Lisu Lycian \
 	Lydian Malayalam Mandaic Meetei_Mayek Mongolian Myanmar NKo Ogham \
-	Ol_Chiki Oriya Osmanya Pahlavi Parthian Persian Phags_Pa Phoenician \
+	Ol_Chiki Old_Italic Oriya Osmanya Pahlavi Parthian Persian Phags_Pa Phoenician \
 	Rejang Runic Samaritan Saurashtra Shavian Sinhala South_Arabian \
 	Sundanese Syloti_Nagri Syriac Tagalog Tagbanwa Tai Tamil Telugu Thaana \
-	Thai Tibetan Tifinagh Turkic Ugaritic Urdu Vai Yi
+	Thai Tibetan Tifinagh Turkic Ugaritic Urdu Vai Yi Symbols
 do
 langpkg=${lang,,}
 langpkg=${langpkg//_/-}

@@ -1,8 +1,8 @@
 inherit font
 
 NAME="noto-fonts"
-VERSION=20161021
-RELEASE=1.git86b2e55
+VERSION=20171024
+RELEASE=1.git8ef14e6
 CATEGORY="X11"
 SUMMARY="Noto fonts"
 DESCRIPTION="Noto's goal is to provide a beautiful reading experience for
@@ -11,7 +11,7 @@ the world and many others, including European, African, Middle Eastern, Indic,
 South and Southeast Asian, Central Asian, American, and East Asian languages.
 Several minority and historical languages are also supported."
 HOMEPAGE="http://www.google.com/get/noto"
-commit=${RELEASE#*git}3c3e3e4d6614dadd1fa0a7a6dafd74552
+commit=${RELEASE#*git}c606a7a0ef3943b9ca01fd49445620d79
 SRC_URI="
 	https://github.com/googlei18n/noto-fonts/archive/${commit}/noto-fonts-${commit}.tar.gz
 	google-croscore-fonts/30-0-google-croscore-arimo-fontconfig.conf
